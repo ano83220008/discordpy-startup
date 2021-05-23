@@ -19,6 +19,6 @@ async def ping(ctx):
 
 @bot.command()
 async def homete(ctx):
-    await ctx.send('えらいっ')
+    await ctx.send(ctx.author.name + 'はえらいっ')
 
 bot.run(token)
