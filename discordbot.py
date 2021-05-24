@@ -4,7 +4,7 @@ import traceback
 
 bot = commands.Bot(command_prefix='/')
 token = os.environ['DISCORD_BOT_TOKEN']
-
+role_match_join = os.environ['ROLE_MATCH_JOIN']
 
 @bot.event
 async def on_command_error(ctx, error):
@@ -23,6 +23,6 @@ async def homete(ctx):
 
 @bot.command()
 async def join(ctx):
-    await ctx.me.add_roles(ROLE_MATCH_JOIN)
+    await ctx.me.add_roles(role_match_join)
 
 bot.run(token)
