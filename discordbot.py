@@ -4,7 +4,6 @@ import traceback
 
 bot = commands.Bot(command_prefix='/')
 token = os.environ['DISCORD_BOT_TOKEN']
-role_match_join = client.guild.get_role(os.environ['ROLE_MATCH_JOIN'])
 
 @bot.event
 async def on_command_error(ctx, error):
@@ -20,9 +19,5 @@ async def ping(ctx):
 @bot.command()
 async def homete(ctx):
     await ctx.send(ctx.author.name + 'はえらいっ')
-
-@bot.command()
-async def join(ctx):
-    await ctx.me.add_roles(role_match_join)
 
 bot.run(token)
