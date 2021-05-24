@@ -23,6 +23,6 @@ async def homete(ctx):
 
 @bot.command()
 async def join(ctx):
-    await ctx.me.roles.add(ROLE_MATCH_JOIN)
+    await ctx.me.add_roles(ROLE_MATCH_JOIN)
 
 bot.run(token)
