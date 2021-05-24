@@ -4,7 +4,7 @@ import traceback
 
 bot = commands.Bot(command_prefix='/')
 token = os.environ['DISCORD_BOT_TOKEN']
-role_match_join = os.environ['ROLE_MATCH_JOIN']
+role_match_join = client.guild.get_role(os.environ['ROLE_MATCH_JOIN'])
 
 @bot.event
 async def on_command_error(ctx, error):
