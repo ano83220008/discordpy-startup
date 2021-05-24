@@ -21,4 +21,8 @@ async def ping(ctx):
 async def homete(ctx):
     await ctx.send(ctx.author.name + 'はえらいっ')
 
+@bot.command()
+async def join(ctx):
+    await ctx.me.member.roles.add(ROLE_MATCH_JOIN)
+
 bot.run(token)
