@@ -8,8 +8,8 @@ load_dotenv()
 
 #main
 bot = commands.Bot(command_prefix='!')
-token=os.getenv('DISCORD_BOT_TOKEN')
-cate_lobby_name = os.getenv('MATCHING_CATEGORY')
+token = os.environ['DISCORD_BOT_TOKEN']
+cate_lobby_name = os.environ['MATCHING_CATEGORY']
 
 class LobbyManager:
     
